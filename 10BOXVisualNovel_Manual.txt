@@ -1,0 +1,78 @@
+10BOX production
+		presents
+
+			\\*****************************************************************************************//
+			||												            ||
+			||					10BOX VISUAL NOVEL ENGINE				            ||
+			||												            ||
+			//*****************************************************************************************\\
+
+Novel Directories:
+----------------------------------------
+
+BGS - backgrounds
+EPS - episodes/chapters (the textual novel itself)
+WAVS - sounds
+
+Novel files & formats:
+-----------------------------------------
+
+Backgrounds (BGS) - almost any. (try to use a power of 2 image)
+Novel plot files (EPS) - .vnp files. (visual novel plot)
+Sound (WAVS) - .wav files only.
+Characters (CHS) - .jpg files only.
+
+
+Novel Writing Syntax:
+------------------------------------------
+
+NAME1: [0 if narrator]
+MOOD1 [Only if not narrator]
+SAYING1
+NAME2:
+MOOD2
+SAYING2
+...
+
+*Moods: 0-upset, 1-sad, 2-happy, 3-angry, 4-blushing
+*Every vnp should start with an empty line.
+*If you want to keep it smooth you can use a '0' or speaker and start the next vnp with the speaking
+
+Special Commands:
+-----------------------------------------
+
+Use "!" on a line on it's own.
+Then use one of the following commands:
+	0 - reset commends (effects, bgs, loaded stuff, etc...)
+	1 - change background
+		This command will be followed by the name (including their format) of the backgrounds to be loaded, each line. (will be layerd accordingly)
+	2 - Set music.
+		will be followed by the track file you want to set to. (loops! sets only one! writing more than one in one commnad might cause for a crash!)
+	3 - Play the sounds.
+		will be followed by the sound effects/tracks that you want to play on each line (won't loop)
+	4 - Use fade.
+		will make a fade effect (1 - on the text, otherwise - on the background. Use one at a time!).
+		if 1: (TEXT)
+			On the next line should be specified the fade factor. ( a floating point number )
+		if 2: (BACKGROUNDS)
+			1 - for black, 2 - for white fade.
+			On the next line should be specified the fade factor. ( a floating point number )
+	5 - A choice/plot twist.
+		Will change the plot.
+		If the next line is space (" ") - it will just skip to the next line file id.
+		 otherwise on each line there will be an option and the line after each option will contain only the number of plot file.
+		If the line of the plot file id is -1 - it will just continue usually as if nothing happened.
+When finished, use "!" to end the command section.
+
+ * YOU CANNOT START A FILE WITH A "!". IF YOU WANT TO, YOU HAVE TO PUT AN EMPTY LINE AS THE FIRST AND THEN USE "!".
+
+End
+---------------------------------------
+
+Hope you enjoy.
+	 Made by g_o/fresh/fresh123456.
+				Good luck!
+________________________________________________________________________________________________________________________________
+2014
+http://www.g--o.net76.net
+All rights reserved © 
