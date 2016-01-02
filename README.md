@@ -1,1 +1,1 @@
-"" 
+WinBox is a free, open source Visual Novel engine for windows made in C++ and DirectX supporting Hebrew and English!
